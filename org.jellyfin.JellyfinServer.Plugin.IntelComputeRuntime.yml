@@ -84,8 +84,10 @@ modules:
             path: no_git_patching.patch
           - type: shell
             commands:
-              - cat llvm-project/llvm/projects/opencl-clang/patches/{clang,llvm}/*.patch | patch -Np1 -d llvm-project
-              - cat llvm-project/llvm/projects/opencl-clang/patches/spirv/*.patch | patch -Np1 -d llvm-project/llvm/projects/llvm-spirv
+              - cat llvm-project/llvm/projects/opencl-clang/patches/{clang,llvm}/*.patch
+                | patch -Np1 -d llvm-project
+              - cat llvm-project/llvm/projects/opencl-clang/patches/spirv/*.patch
+                | patch -Np1 -d llvm-project/llvm/projects/llvm-spirv
       - name: intel-gmmlib
         buildsystem: cmake-ninja
         builddir: true
@@ -104,8 +106,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2023.02.06.tar.gz
-        sha256: 464d1b04a5e185739065b2d86e4cebf02c154c416d63e6067a5060d7c053c79a
+        url: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2023.04.17.tar.gz
+        sha256: 0ce992f4167f958f68a37918dec6325be18f848dee29a4521c633aae3304915d
         x-checker-data:
           type: anitya
           project-id: 223257
@@ -119,7 +121,8 @@ modules:
       - --enable-official-khronos-headers
     post-install:
       - install -D $FLATPAK_ID.metainfo.xml $FLATPAK_DEST/share/metainfo/$FLATPAK_ID.metainfo.xml
-      - appstream-compose --basename=$FLATPAK_ID --prefix=$FLATPAK_DEST --origin=flatpak $FLATPAK_ID
+      - appstream-compose --basename=$FLATPAK_ID --prefix=$FLATPAK_DEST --origin=flatpak
+        $FLATPAK_ID
       - ln -s /usr/lib/$(uname -m)-linux-gnu/GL/OpenCL/vendors/*.icd $FLATPAK_DEST/OpenCL/vendors
     sources:
       - type: archive
