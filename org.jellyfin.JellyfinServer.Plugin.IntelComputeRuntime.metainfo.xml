@@ -4,6 +4,7 @@
   <extends>org.jellyfin.JellyfinServer</extends>
   <name>Intel Compute Runtime plugin for Jellyfin Server</name>
   <summary>Provides Intel OpenCL Driver.</summary>
+  
   <description>
     <p>
       Intel® Graphics Compute Runtime for oneAPI Level Zero and OpenCL™ Driver
@@ -14,7 +15,6 @@
   <project_license>MIT</project_license>
   <developer_name>Intel</developer_name>
   <releases>
-    <release version="2.3.2" date="2023-06-03"/>
     <release version="22.43.24595.30" date="2022-12-06"/>
   </releases>
 </component>
