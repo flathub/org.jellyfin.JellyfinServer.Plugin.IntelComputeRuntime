@@ -7,7 +7,7 @@ build-extension: true
 separate-locales: false
 appstream-compose: false
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.llvm16
+  - org.freedesktop.Sdk.Extension.llvm15
 build-options:
   prefix: /app/extensions/IntelComputeRuntime
   prepend-path: /app/extensions/IntelComputeRuntime/bin
@@ -75,8 +75,8 @@ modules:
       - name: intel-graphics-compiler
         buildsystem: cmake-ninja
         build-options:
-          append-path: /usr/lib/sdk/llvm16/bin
-          prepend-ld-library-path: /usr/lib/sdk/llvm16/lib
+          append-path: /usr/lib/sdk/llvm15/bin
+          prepend-ld-library-path: /usr/lib/sdk/llvm15/lib
           env:
             CC: clang
             CXX: clang++
