@@ -25,8 +25,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2023.04.17.tar.gz
-        sha256: 0ce992f4167f958f68a37918dec6325be18f848dee29a4521c633aae3304915d
+        url: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2025.07.22.tar.gz
+        sha256: 98f0a3ea26b4aec051e533cb1750db2998ab8e82eda97269ed6efe66ec94a240
         x-checker-data:
           type: anitya
           project-id: 223257
