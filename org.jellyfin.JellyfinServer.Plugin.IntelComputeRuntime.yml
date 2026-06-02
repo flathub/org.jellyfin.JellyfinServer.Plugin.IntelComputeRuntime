@@ -25,8 +25,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2023.04.17.tar.gz
-        sha256: 0ce992f4167f958f68a37918dec6325be18f848dee29a4521c633aae3304915d
+        url: https://github.com/KhronosGroup/OpenCL-Headers/archive/refs/tags/v2026.05.29.tar.gz
+        sha256: d9e6c48357de5002da11ce45de600e0c3ffe6ab4f628a3b9fe2b38603161658a
         x-checker-data:
           type: anitya
           project-id: 223257
@@ -40,8 +40,8 @@ modules:
       - --enable-official-khronos-headers
     sources:
       - type: archive
-        url: https://github.com/OCL-dev/ocl-icd/archive/refs/tags/v2.3.2.tar.gz
-        sha256: ec47d7dcd961ea06695b067e8b7edb82e420ddce03e0081a908c62fd0b8535c5
+        url: https://github.com/OCL-dev/ocl-icd/archive/refs/tags/v2.3.5.tar.gz
+        sha256: cdd7984425fa92d37273eee4180b5f57b047eda6dd8fd623e58498f844b09b75
         x-checker-data:
           type: anitya
           project-id: 2525
